@@ -1,6 +1,7 @@
 package com.example.kitsugithub.data.remote
 
 import com.example.kitsugithub.data.remote.apiservices.AnimeApiServices
+import com.example.kitsugithub.data.remote.apiservices.MangaApiServices
 import com.example.kitsugithub.utils.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -30,5 +31,9 @@ class RetrofitClient {
 
     fun provideAnimeApiServices(): AnimeApiServices {
         return retrofitClient.create(AnimeApiServices::class.java)
+    }
+
+    fun provideMangaApiServices(): MangaApiServices {
+        return retrofitClient.create(MangaApiServices::class.java)
     }
 }
