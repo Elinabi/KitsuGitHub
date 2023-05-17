@@ -1,11 +1,10 @@
 package com.example.kitsugithub.base
 
-import androidx.lifecycle.liveData
 import com.example.kitsugithub.utils.Resource
-
+import kotlinx.coroutines.flow.flow
 abstract class BaseRepository {
 
-    fun <T> doRequest(request: suspend () -> T) = liveData {
+    fun <T> doRequest(request: suspend () -> T) = flow {
         emit(Resource.Loading())
         try {
             emit(Resource.Success(request()))

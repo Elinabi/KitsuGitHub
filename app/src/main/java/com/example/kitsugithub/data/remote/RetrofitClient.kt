@@ -32,7 +32,6 @@ class RetrofitClient {
     fun provideAnimeApiServices(): AnimeApiServices {
         return retrofitClient.create(AnimeApiServices::class.java)
     }
-
     fun provideMangaApiServices(): MangaApiServices {
         return retrofitClient.create(MangaApiServices::class.java)
     }
