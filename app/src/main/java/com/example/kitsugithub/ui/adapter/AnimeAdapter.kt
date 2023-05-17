@@ -10,12 +10,19 @@ import com.example.kitsugithub.models.DataItem
 import com.example.kitsugithub.databinding.ItemKitsuBinding
 import com.example.kitsugithub.extension.setImage
 
-class AnimeAdapter: PagingDataAdapter<DataItem, AnimeAdapter.ViewHolder>(
+class AnimeAdapter(val onItemClick: (id: String) -> Unit):
+    PagingDataAdapter<DataItem, AnimeAdapter.ViewHolder>(
     AnimeDiffCallBack
 ) {
 
     inner class ViewHolder(private val binding: ItemKitsuBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            itemView.setOnClickListener {
+                getItem(absoluteAdapterPosition)?.let { anime -> onItemClick(anime.id) }
+            }
+        }
 
         fun onBind(item: DataItem) {
             binding.itemText.text = item.attributes.titles.enJp
