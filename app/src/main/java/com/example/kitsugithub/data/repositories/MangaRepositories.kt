@@ -17,4 +17,8 @@ class MangaRepositories  @Inject constructor(
     ) {
         MangaPagingSours(mangaApiServices)
     }.liveData
+
+    fun fetchMangaDetail(id: String) = doRequest {
+        mangaApiServices.fetchMangaDetail(id)
+    }
 }

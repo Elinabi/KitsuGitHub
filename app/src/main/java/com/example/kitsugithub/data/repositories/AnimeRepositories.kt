@@ -17,4 +17,8 @@ class AnimeRepositories  @Inject constructor(
     ) {
         AnimePagingSours(animeApiServices)
     }.liveData
+
+    fun fetchAnimeDetail(id: String) = doRequest {
+        animeApiServices.fetchAnimeDetail(id)
+    }
 }
