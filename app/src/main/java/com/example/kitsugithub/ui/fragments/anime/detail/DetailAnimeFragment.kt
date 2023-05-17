@@ -31,7 +31,6 @@ class DetailAnimeFragment :
                     tvAnimePremiered.text = it.attributes.startDate
                     tvAnimeAgeRating.text = it.attributes.ageRatingGuide
                     detailDescription.text = it.attributes.description
-
                 }
             }
         )
