@@ -1,7 +1,7 @@
 package com.example.kitsugithub.data.repositories.pagingsours
 
 import android.net.Uri
-import com.example.kitsugithub.Models.DataItem
+import com.example.kitsugithub.models.DataItem
 import com.example.kitsugithub.base.BasePagingSource
 import com.example.kitsugithub.data.remote.apiservices.AnimeApiServices
 

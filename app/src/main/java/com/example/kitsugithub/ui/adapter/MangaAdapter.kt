@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kitsugithub.Models.DataItem
+import com.example.kitsugithub.models.DataItem
 import com.example.kitsugithub.databinding.ItemKitsuBinding
 import com.example.kitsugithub.extension.setImage
 
