@@ -19,5 +19,29 @@
         android:id="@+id/tabLayoutFragment"
         android:name="com.example.kitsugithub.ui.fragments.tablayout.TabLayoutFragment"
         android:label="fragment_tab_layout"
-        tools:layout="@layout/fragment_tab_layout" />
+        tools:layout="@layout/fragment_tab_layout" >
+        <action
+            android:id="@+id/action_tabLayoutFragment_to_detailAnimeFragment"
+            app:destination="@id/detailAnimeFragment" />
+        <action
+            android:id="@+id/action_tabLayoutFragment_to_detailMangaFragment"
+            app:destination="@id/detailMangaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMangaFragment"
+        android:name="com.example.kitsugithub.ui.fragments.manga.detail.DetailMangaFragment"
+        android:label="fragment_detail_manga"
+        tools:layout="@layout/fragment_detail_manga" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+     <fragment
+        android:id="@+id/detailAnimeFragment"
+        android:name="com.example.kitsugithub.ui.fragments.anime.detail.DetailAnimeFragment"
+        android:label="DetailAnimeFragment" >
+         <argument
+             android:name="id"
+             app:argType="string" />
+     </fragment>
 </navigation>
