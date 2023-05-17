@@ -5,6 +5,8 @@ plugins {
     kotlin("kapt")
     //Hilt
     id("com.google.dagger.hilt.android")
+    // SafeArgs
+    id ("androidx.navigation.safeargs")
 }
 android {
     namespace = "com.example.kitsugithub"
